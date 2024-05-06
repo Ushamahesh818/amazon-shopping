@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    
+  </style>
+    <script>
+        function ShowImageOnClick(){
+            console.log("is")
+           var pic= document.createElement("img");
+           pic.src="../../../../public/images/a1.jpg";
+           pic.height="200"
+           pic.width="200"
+           console.log("pic"+pic)
+           document.getElementById("container").appendChild(pic);
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="ShowImageOnClick()">Show Image</button>
+    <div id="container">
+
+    </div>
+</body>
+</html>

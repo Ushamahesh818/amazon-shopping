@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .card{
+        box-shadow:2px 2px 2px gray;
+        border:1px solid gray;
+        border-radius:10px;
+        position:absolute;
+
+    }
+
+
+    /* Animation */
+    .card:hover{
+        transform:scale(1.5);
+        transition:1s;
+    }
+    #women{
+        
+        background-image:url("../../images/women-fashion.jpg");
+        background-size:cover;
+        width:600px;
+        height:250px;
+        margin-top:100px;
+        margin-left:150px;
+        z-index:3;
+    }
+    #men{
+        
+        background-image:url("../../images/men-fashion.jpg");
+        background-size:cover;
+        width:300px;
+        height:300px;
+        margin-top:100px;
+        z-index:2;
+    }
+    #kids{
+        
+        background-image:url("../../images/kids-fashion.jpg");
+        background-size:cover;
+        width:400px;
+        height:300px;
+        margin-left:100px;
+        z-index:0;
+    }
+</style>
+
+</head>
+<body>
+    <div class="card" id="women"></div>
+    <div class="card" id="men"></div>
+    <div class="card" id="kids"></div>
+</body>
+</html>

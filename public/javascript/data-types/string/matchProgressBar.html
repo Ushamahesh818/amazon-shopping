@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+       function VerifyPassword(){
+        var pwd=document.getElementById("txtPwd").value;
+        var progress=document.getElementById("progress");
+        var regExp=/(?=.*[A-Z])\w{4,15}/;
+        if(pwd.match(regExp)){
+            progress.style.width="100%";
+            progress.className="bg-success progress-bar progress-bar-animated progress-bar-striped" ;
+            progress.innerHTML="Strong Password"
+        }else{
+            if(pwd.length <4){
+              progress.style.width="20%";
+              progress.className="bg-danger progress-bar progress-bar-animated progress-bar-striped" ;
+              progress.innerHTML="Poor Password"
+            }else{
+               progress.style.width="60%";
+               progress.className="bg-warning progress-bar progress-bar-animated progress-bar-striped" ;
+               progress.innerHTML="Weak Password"
+            }
+        }
+
+       }
+    </script>
+</head>
+<body class="container-fluid">
+    <dl class="mt-4">
+        <dt>Password</dt>
+        <dd><input type="password" id="txtPwd" onkeyup="VerifyPassword()">
+        <div class="progress w-25 mt-3">
+            <div id="progress">
+
+            </div>
+        </div>
+        </dd>
+        
+    </dl>
+</body>
+</html>

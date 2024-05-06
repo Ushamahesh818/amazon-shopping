@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display:flex;
+            justify-content:space-evenly;
+        }
+        .card{
+            margin-top:100px;
+            border:1px solid black;
+            box-shadow:2px 2px 2px gray;
+            width:250px;
+            padding:10px;
+        }  
+        .card:target{
+            background-color:black;
+            color:white;    
+            border-radius:50px;
+        }
+        header{
+            background-color:black;
+
+        }
+        
+        nav ul{
+             display:flex;
+            text-align:center;
+            list-style:none;
+            font-family:Arial;
+            font-size:20px;   
+            padding:10px;
+          align-items:center;
+          justify-content: center;
+        }
+        nav ul a{
+            text-decoration:none;
+            color:white;  
+            margin-right:30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#js">Javascript</a></li>
+        </ul>
+        </nav>
+    </header>
+    <section>
+        
+        <div class="card" id="html">
+            <h2 >HTML</h2>
+            <ul>
+                <li>List tags</li>
+                <li>Font tags</li>
+                <li>Link tags</li>
+            </ul>
+        </div>
+        <div class="card" id="css">
+            <h2>CSS</h2>
+            <ul>
+                <li>Combinators</li>
+                <li>Specificity</li>
+                <li>display</li>
+            </ul>
+        </div>
+        <div class="card" id="js">
+            <h2>Javascript</h2>
+            <ul>
+                <li>Data types</li>
+                <li>Classes</li>
+                <li>Inheritance</li>
+            </ul>
+        </div>
+    </section>
+    
+</body>
+</html>

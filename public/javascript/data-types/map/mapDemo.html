@@ -1,0 +1,22 @@
+<script>
+    var data=new Map();
+    data.set("HTML","It is a Markup Language");
+    data.set(1,["Delhi","Hyd"]);
+    data.set("Rating",{rate:4.3})
+
+    for(var item of data.keys()){
+        document.write(item+'<br>')
+    }
+
+    for(var item of data.values()){
+        document.write(item+'<br>')
+    }
+
+    for(var item of data.entries()){
+        document.write(item+'<br>')
+    }
+
+    data.delete("Rating")
+    console.log(data.has("Rating"))
+    document.write(data.size)
+</script>

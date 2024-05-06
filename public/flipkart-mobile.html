@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        .container{
+            display:grid;
+            grid-template-columns:3fr 9fr;
+            column-gap:50px;
+
+        }
+
+        .rating{
+            background-color: green;
+            padding:2px;
+            color:white;
+            border-radius:5px;
+        }
+        ul{
+            list-style:none;
+            margin-left:-40px;
+        }
+        .bi-tag-fill{
+            color:green;
+        }
+        ul li span{
+            color:black;
+        }
+        li{
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="/public/images/iphone.png" width="100%">
+        </div>
+
+        <div>
+            <div>
+            <font sixe="5" face="Arial">Apple iPhone 14 (Starlight, 128 GB)</font>
+            </div>
+            <br>
+            <div>
+                <span class="rating">4.6<span class="bi bi-star-fill"></span></span>
+                <span><b><font color="gray" size="4" face="Arial">2,80,621 Ratings & 11,062 Reviews</font></b></span>
+            </div>
+            <br>
+            <div>
+                <span><font color="green" size="5"  face="Arial">Extra ₹10901 off</font></span>
+            </div>
+            <br>
+            <div>
+                <span><b><font size="6"  face="Arial">₹58,999</font></b></span>
+                &nbsp;<span><strike><font color="gray" size="4"  face="Arial">₹69,900</font></strike></span>
+                &nbsp;<span><font color="green" size="4"  face="Arial">15% off</font></span>
+            </div>
+            
+            <div>
+                <font  face="Arial"><h3>Available Offers</h3></font>
+                <ul>
+                    <li class="bi bi-tag-fill">
+                        <span>Bank OfferGet ₹25* instant discount for the 1st Flipkart Order using Flipkart UPIT&C</span>
+                    </li>
+                    <li class="bi bi-tag-fill">
+                        <span>Bank Offer10% off on HSBC Bank Credit Card EMI Transactions, up to ₹1,500 on orders of ₹10,000 and aboveT&C</span>
+                    </li>
+                    <li class="bi bi-tag-fill">
+                        <span>Bank OfferFlat ₹2,500 off on ICICI Bank Credit EMI Transactions, upto ₹2,500 on orders of ₹50,000 and aboveT&C</span>
+                    </li>
+                    <li class="bi bi-tag-fill">
+                        <span>Special PriceGet extra ₹10901 off (price inclusive of cashback/coupon)T&C</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var categories=["All","Electronics","Footwear","Fashion"];
+        function bodyLoad(){
+            categories.map(function(category){
+                var ol_li=document.createElement("li");
+                ol_li.innerHTML=category;
+                document.querySelector("ol").appendChild(ol_li);
+
+                var optionEle=document.createElement("option");
+                optionEle.text=category;
+                optionEle.value=category;
+                document.querySelector("select").appendChild(optionEle);
+
+                var ul_li=document.createElement("li");
+
+                var input=document.createElement("input");
+                input.type="checkbox";
+
+                var label=document.createElement("label");
+                label.innerHTML=category;
+
+                ul_li.appendChild(input);
+                ul_li.appendChild(label);
+                document.querySelector("ul").appendChild(ul_li);
+
+                var tr=document.createElement("tr");
+                var td=document.createElement("td");
+                td.innerHTML=category;
+                tr.appendChild(td);
+
+                document.querySelector("tbody").appendChild(tr);
+
+            })
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <ol></ol>
+    <select></select>
+    <ul></ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

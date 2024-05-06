@@ -1,0 +1,17 @@
+<script>
+    var product={
+        Name:"Samsung TV",
+        Price:4500.50,
+        Quantity:0,
+        Total:function(){
+            return this.Quantity * this.Price;
+        },
+        Print:function(){
+            return `Name=${this.Name}<br>Price=${this.Price}<br>QTY=${this.Quantity}<br>Total=${this.Total()}`
+        }
+    }
+
+    product.Quantity=parseInt(prompt("Enter Quantity"));
+    document.write(product.Print());
+
+</script>

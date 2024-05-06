@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .child-list{
+            display:flex;
+
+        } */
+
+        /* .child-list{
+            display:grid;
+            grid-template-columns:6fr 6fr;
+        } */
+
+        .child-list{
+            columns:2;
+        }
+    </style>
+</head>
+<body>
+    <ol type="1">
+        <li>
+            ___________________ elements will not have end token.
+            <ol type="a" class="child-list">
+                <li>Normal elements</li>
+                <li>Void Elements</li>
+                <li>Raw text elements</li>
+                <li>RC data elements</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>

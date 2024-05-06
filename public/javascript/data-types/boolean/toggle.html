@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function StockChange() {
+            var stockChkBox = document.getElementById("optStock");
+            var labelChkBox = document.getElementById("lblStock");
+            labelChkBox.innerHTML = stockChkBox.checked ? 'Available' : 'Out of Stock';
+        }
+
+        function SortClick(){
+            var sortBtn=document.getElementById("btnSort");
+            sortBtn.className=(sortBtn.className == "btn btn-success bi bi-sort-alpha-down")?"btn btn-warning bi bi-sort-alpha-up":"btn btn-success bi bi-sort-alpha-down";
+
+        }
+    </script>
+</head>
+
+<body>
+    <dl>
+        <dt>Stock</dt>
+        <dd><input type="checkbox" id="optStock" onchange="StockChange()"></dd><label id="lblStock">Out of stock</label>
+    </dl>
+    <button onclick="SortClick()" id="btnSort" class="btn btn-success bi bi-sort-alpha-down"></button>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyLoad(){
+            var data=[]
+            var url='../../../data/ipl-points.json'
+            var http=new XMLHttpRequest();
+            http.open('get',url,true);
+            http.send();
+
+            http.onreadystatechange=function(){
+                if(http.readyState == 4){
+                    data=JSON.parse(http.response);
+                    data.map(function(item){
+                        var div=document.createElement("div");
+                        div.className="card";
+                        div.style.width="200px";
+                        div.innerHTML=`
+                        <img src=${item.Logo} class="card-img-top" height="50">
+                        <div class="card-header">
+                            <div class="h3">${item.Title}</div>
+                         </div>
+                         <div class="card-body">
+                            <dl>
+                                <dt>Matches Played</dt>
+                                <dd> ${item.Matches}</dd>
+
+                                <dt>Matches WON</dt>
+                                <dd> ${item.Won}</dd>
+
+                                <dt>Matches Lost</dt>
+                                <dd> ${item.Lost}</dd>
+
+                                <dt>Matches Pointst</dt>
+                                <dd> ${item.Pts}</dd>
+
+                                dt>NRR</dt>
+                                <dd> ${item.NRR}</dd>
+                                
+                             </dl>
+
+                         </div>      
+                        `;
+                        document.querySelector("main").appendChild(div);
+
+                    })
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    <main class="my-4 d-flex justify-content-between">
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        .banner{
+            height:400px;
+            width:500px;
+            border:1px solid black;
+            overflow:hidden;
+            position:relative;
+        }
+        img{
+            width:550px;
+            height:400px;
+            transition:0.5s;
+        }
+
+        img:hover{
+            transform:translate(-10px);
+            transition:0.5s;
+        }
+        .btn-shop{
+            position:absolute;
+            top:200px;
+            left:50px;
+            font-size:20px;
+            width:150px;
+            padding:5px;
+        }
+
+        .bi-arrow-right{
+            transform:translateX(0px);
+            display:inline-block;
+        }
+
+        .banner:hover .bi-arrow-right{
+            transform:translateX(10px);
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        
+        <img src="../../images/women-in-corner1.jpg">
+        <button class="btn-shop">
+            Shop<span class="bi bi-arrow-right"></span>
+        </button>
+    </div>
+</body>
+</html>

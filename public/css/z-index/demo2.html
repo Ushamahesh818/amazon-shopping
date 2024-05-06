@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    section{
+        display:grid;
+        grid-template-columns:8fr 4fr;
+    }
+
+    .house{
+        background-image: url("../../images/beach.jpg");
+        width:300px;
+        height:300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position:relative;
+    }
+
+    .pic1{
+        background-image:url("../../images/beach2-icon.png");
+        width:50px;
+        height:50px;
+        border-radius: 50px;
+        background-repeat: no-repeat;
+        background-size:cover;
+        border:4px solid white;
+        position:absolute;
+        top:50px;
+        left:-30px;
+    }
+    .pic2{
+        background-image:url("../../images/beach-icon.png");
+        width:50px;
+        height:50px;
+        border-radius: 50px;
+        background-repeat: no-repeat;
+        background-size:cover;
+        border:4px solid white;
+        position:absolute;
+        top:150px;
+        left:-30px;
+    }
+    nav{
+        height:60px;
+        background-color: lightcyan;
+        width:70%;
+        border-radius:10px;
+        box-shadow:2px 2px 2px black;
+        position:absolute;
+        top:240px;
+    }
+</style>
+    
+</head>
+<body>
+    <section>
+        <main></main>
+        <aside>
+            <div class="house">
+                <div class="pic1"></div>
+                <div class="pic2"></div>
+            </div>
+        </aside>
+    </section>
+    <nav>
+
+    </nav>
+</body>
+</html>

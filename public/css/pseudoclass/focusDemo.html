@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .username+div{
+            display:none;
+        }
+        .username:focus+div{
+            display:block;
+            font-family:Arial;
+            font-size:18px;
+            color:red;
+        }
+
+        .userid:read-only{
+            cursor:not-allowed;
+        }
+
+        .Terms+label{
+            color:red;
+        }
+
+        .Terms:checked+label{
+            color:green;
+        }
+
+        .Terms ~ button{
+            display:none;
+        }
+        .Terms:checked ~ button{
+            display:block;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User id</dt>
+            <dd><input type="text" class="userid" readonly></dd>
+            <dt>Username</dt>
+            <dd><input type="text" name="username" class="username">
+            <div>Enter Block letters only</div>
+            </dd>
+            <dt>Terms of Service</dt>
+            <dd><textarea rows="5" cols="30" disabled>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias natus velit rem, nemo blanditiis reiciendis id? Vel quasi nam veritatis magni consequatur! Nemo accusamus veritatis harum nulla error atque qui.</textarea></dd>
+            <dd>
+                <input type="checkbox" class="Terms"><label>I Accept</label>
+                <br><br>
+                <button>Submit</button>
+            </dd>
+        </dl>
+    </form>
+</body>
+</html>

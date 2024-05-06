@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../node_modules//bootstrap/dist/css/bootstrap.css">
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        function RegisterClicked(){
+            document.getElementById("detailsSummary").style.display="block";
+
+            document.getElementById("lblName").innerHTML= document.getElementById("txtName").value;
+            //document.getElementById("lblPrice").innerHTML= document.getElementById("txtPrice").value;
+            document.getElementById("lblShippingTo").innerHTML= document.getElementById("lstCities").value;
+           document.getElementById("lblPrice").innerHTML= document.getElementById("price").value;
+           //document.getElementById("txtPrice").value
+           stockCheckBox=document.getElementById("optStock");
+           StockStatus='';
+           if (stockCheckBox.checked){
+            StockStatus="Available"
+           }else{
+            StockStatus="Out of stock"
+           }
+           document.getElementById("lblStock").innerHTML=StockStatus;
+
+        }
+
+        function EditClick(){
+            document.getElementById("btnRegister").innerHTML="Save";
+            document.getElementById("title").innerHTML="Edit Booking";
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <button data-bs-target="#register" data-bs-toggle="modal" class="btn btn-primary mt-2">Register Product</button>
+
+    <div class="modal fade" id="register">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="title">Register Product</h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <dl>
+                        <dt>Name</dt>
+                        <dd><input type="text" id="txtName" class="form-control"></dd>
+
+                        <dt>Price</dt>
+                        <dd><input type="number" id="price" class="form-control"></dd>
+
+                        <dt>Shippping To</dt>
+                        <dd>
+                            <select id="lstCities" class="form-select">
+                                <option value="select" select></option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="KA">Karnataka</option>
+                            </select>
+                        </dd>
+                        <dt>Stock</dt>
+                        <dd class="form-switch">
+                            <input type="checkbox" class="form-check-input" id="optStock">Available
+                        </dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnRegister" class="btn btn-primary" onclick="RegisterClicked()"  data-bs-dismiss="modal">Register</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="detailsSummary" style="display:none">
+        <dl>
+            <dt>Name</dt>
+            <dd id="lblName"></dd>
+
+            <dt>Price</dt>
+            <dd id="lblPrice"></dd>
+
+            <dt>Shipping To</dt>
+            <dd id="lblShippingTo"></dd>
+
+            <dt>Stock</dt>
+            <dd id="lblStock"></dd>
+        </dl>
+    <button onclick="EditClick()" data-bs-target="#register" data-bs-toggle="modal" class="btn btn-warning bi bi-pen-fill">Edit</button>
+    </div>
+</body>
+
+</html>

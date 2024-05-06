@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+    button{
+        transition:5s;
+    }
+
+    button:hover{
+        /* transform:matrix(1.4,0,0,2,0,0); only scale->width and height is adjusted */
+        transform:matrix(1.4,0.2,0.2,1.5,100,0);
+        transition:2s;
+    }
+</style>
+</head>
+<body>
+    <button>submit</button>
+</body>
+</html>

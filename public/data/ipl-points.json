@@ -1,0 +1,29 @@
+[
+    {
+        "Title":"Royals",
+        "Logo":"../../../../public/images/ipl1.gif",
+        "Matches":9,
+        "Won":5,
+        "Lost":1,
+        "Pts":2,
+        "NRR":0.9
+    },
+    {
+        "Title":"Knight Riders",
+        "Logo":"../../../../public/images/ipl2.gif",
+        "Matches":10,
+        "Won":3,
+        "Lost":11,
+        "Pts":21,
+        "NRR":0.934
+    },
+    {
+        "Title":"Super Kings",
+        "Logo":"../../../../public/images/ipl3.gif",
+        "Matches":10,
+        "Won":3,
+        "Lost":11,
+        "Pts":21,
+        "NRR":0.934
+    }
+]

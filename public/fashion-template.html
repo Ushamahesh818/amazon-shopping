@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header{
+            font-size:15px;
+            font-family:Arial;
+            padding:20px;
+            display:flex;
+            justify-content:space-between;
+        }
+        .brand-title{
+            font-weight:bold;
+            font-size:20px;
+        }
+        span{
+            padding-right: 10px;
+        }
+    </style>
+
+    <script>
+        function changeIcon(){
+            console.log(this);
+
+             let spanEle=document.querySelector("span")
+            spanEle.addEventListener("click",function(){
+                console.log(this);
+                // spanEle.src="bi bi-chevron-up";
+            });
+        }
+    </script>
+</head>
+<body>
+   
+    <header>
+        <div>
+            <span class="brand-title">SELL.</span>
+        </div>
+        <div>
+            <nav>
+            <span>HOME<span class="bi bi-chevron-down" id="Home" onclick="changeIcon()"></span></span>
+            <span>SHOP<span class="bi bi-chevron-down" id="shop"></span></span>
+            <span>TEMPLATE<span class="bi bi-chevron-down" id="template"></span></span>
+            <span>DROPDOWN<span class="bi bi-chevron-down" id="dropdown"></span></span>
+            <span>CONTACT<span class="bi bi-chevron-down" id="contact"></span></span>
+            <span>DOCS<span class="bi bi-chevron-down" id="docs"></span></span>
+            </nav>
+        </div>
+        <div>
+           <span class="bi bi-search"></span>
+           <span class="bi bi-person-circle"></span>
+           <span class="bi bi-cart"></span>
+        </div>
+    </header>
+    
+</body>
+</html>

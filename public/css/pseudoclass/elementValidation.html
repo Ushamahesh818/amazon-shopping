@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        input:required+span{
+            color:red;
+        }
+        input:optional+span{
+            display:none;
+        }
+
+        input:required{
+            border:1px solid red;
+        }
+
+        input:optional{
+            border:1px solid green;
+        }
+
+        input:valid+span{
+            display:none
+        }
+        input:valid{
+            border:1px solid black;
+        }
+
+        .Mobile ~div{
+            display:none;
+        }
+
+        .Mobile:invalid~div{
+            display:block;
+            color:red;
+        }
+
+        .Age:in-range+div{
+            display:none
+        }
+        .Age:out-of-range+div{
+            display:block;
+            color:red;
+            font-size:14px;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>Username</dt>
+            <dd><input type="text" required><span>*</span></dd>
+            <dt>Password</dt>
+            <dd><input type="password" required><span>*</span></dd>
+            <dt>Age</dt>
+            <dd><input type="number" min="15" max="30" class="Age">
+            <div>Age should be betwwen 15 and 30</div>
+            </dd>
+            <dt>Mobile</dt>
+            <dd><input type="text" class="Mobile" pattern="\+91\d{10}"><span>*</span>
+            <div>Mobile should start witn +91 and 10 digits</div>
+            </dd>
+            
+        </dl>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const courses=["HTML","CSS","Python"]
+        function ShowClick(){
+            var ol=document.createElement("ol");
+
+            ol.type="a";
+            courses.map(value=>{
+                var li=document.createElement("li");
+                li.innerHTML=value;
+                ol.appendChild(li);
+            }
+        )
+
+
+             document.getElementById("container").appendChild(ol);
+
+
+        }
+        </script>
+</head>
+<body>
+    <button onClick="ShowClick()">Show List</button>
+    <br>
+    <div id="container"></div>
+</body>
+</html>
