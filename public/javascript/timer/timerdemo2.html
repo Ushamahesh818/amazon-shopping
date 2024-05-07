@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Demo</title>
+<script>
+    function Tip1(){
+        document.querySelector("p").innerHTML="1.CamelCase"
+    }
+    function Tip2(){
+         document.querySelector("p").innerHTML="2.block scope"
+    }
+    function Tip3(){
+        document.querySelector("p").innerHTML="3.function scope";
+        
+    }
+
+    function showClick(){
+        setTimeout(Tip1,2000);
+        setTimeout(Tip2,5000);
+        setTimeout(Tip3,10000);
+    }
+</script>
+</head>
+<body>
+    <button onclick="showClick()">Show Tips</button>
+    <p></p>
+</body>
+</html>
