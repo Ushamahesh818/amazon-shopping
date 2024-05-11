@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules//bootstrap/dist/css/bootstrap.css">
+    <script>
+        var userDetails={
+            Email:'david@gmail.com',
+            Mobile:"1234567",
+            Password:'david'
+        }
+        function ToggleContainers(){
+            document.getElementById("userIdContainer").style.display="none";
+            document.getElementById("passwordContainer").style.display="block";
+        }
+
+        var flag="";
+        function ContinueClick(){
+            var userId=document.getElementById("txtUser").value;
+            if(userId === userDetails.Email){
+                flag=`Login Success:Verification Link sent to your email:${userId}`;
+                ToggleContainers();
+            }
+            else if(userId === userDetails.Mobile){
+                flag=`Login Success:Verification Code sent to your Mobile:${userId}`;
+                ToggleContainers();
+            }else{
+                document.getElementById("error").innerHTML=`${userId} not found`;
+            }
+        }
+
+        function LoginClick(){
+            var password=document.getElementById("txtPassword").value;
+            if(password === userDetails.Password){
+                document.write(`<h2>${flag}</h2>`)
+            }else{
+                document.getElementById("PwdError").innerHTML='Wrong Password';
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh">
+    <div>
+        <div id="userIdContainer">
+            <h2>Sign In</h2>
+            <div>
+                <label class="form-label fw-bold">E-mail address or mobile phone number</label>
+                <div>
+                    <input type="text" id="txtUser" class="form-control">
+                </div>
+                <div id="error"></div>
+            </div>
+            <div class="my-2">
+                <button class="btn btn-warning w-100" onclick="ContinueClick()">Continue</button>
+            </div>
+
+        </div>
+        <div id="passwordContainer" style="display:none;">
+            <h2>Sign In</h2>
+            <div>
+                <label class="form-label fw-bold">Password</label>
+                <div>
+                    <input type="text" id="txtPassword" class="form-control">
+                </div>
+                <div id="PwdError"></div>
+            </div>
+            <div class="my-2">
+                <button class="btn btn-warning w-100" onclick="LoginClick()">Login</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

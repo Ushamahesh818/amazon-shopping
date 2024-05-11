@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var position=50;
+    function moveRight(){
+        position+=50;
+        document.querySelector("img").style.marginLeft=position+"px";
+    }
+</script>
+<body>
+    <button onclick="moveRight()">Move Right</button><br><br>
+    <img src="../../../public/images/women-fashion.jpg" width="100px" height="100px;">
+
+</body>
+</html>

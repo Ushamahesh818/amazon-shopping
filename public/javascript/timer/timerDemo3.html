@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css" >
+    <link rel="stylesheet" href="../../../node_modules//bootstrap/dist/css/bootstrap.css">
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        progress{
+            width:300px;
+            height:30px;
+        }
+        @keyframes Fade {
+            from{
+                /* opacity:0; */
+                transform:rotate(0deg);
+                width:40px;
+                height:40px;
+            }
+            to{
+                /* opacity:1; */
+                transform:rotate(360deg);
+                width:400px;
+                height:400px;
+            }
+        }
+    </style>
+    <script>
+        var count=1;
+        function Progress(){
+            count++;
+            document.getElementById("Progress").value=count;
+            document.getElementById("status").innerHTML=`${count}% Completed`;
+
+            if(count == 100){
+            document.getElementById("ProgressContainer").style.display="none";
+            document.getElementById("ImageContainer").style.display="block"; 
+            document.querySelector("img") .style.animationName="Fade";
+            document.querySelector("img") .style.animationDuration="5s"
+            }
+        }
+        var timer;
+        function LoadClick(){
+            document.getElementById("LoadingContainer").style.display="none";
+            document.getElementById("ProgressContainer").style.display="block";
+            timer=setInterval(Progress,100)
+        }
+
+        function PauseClick(){
+            clearInterval(timer);
+        }
+
+        function PlayClick(){
+            timer=setInterval(Progress,100)
+        }
+
+        
+    </script>
+</head> 
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh">
+    
+    <div id="LoadingContainer">
+        <button onclick="LoadClick()" class="btn btn-primary">Load Image</button>
+    </div>
+
+    <div id="ProgressContainer" style="display:none">
+    <progress id="Progress" min="1" max="100"></progress>
+    <button onclick="PauseClick()" class="bi bi-pause btn btn-warning"></button>
+    <button onclick="PlayClick()" class="bi bi-play btn btn-success"></button>
+    <p id="status"></p>
+    </div>
+
+    <div id="ImageContainer" style="display:none">
+    <img src="../../../public/images/women-travel.jpg" width="300" height="300">
+    </div>
+</body>
+</html>

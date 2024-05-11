@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        const user={
+            Card:"12345",
+            CVV:"123",
+            Expiry:"2022"
+        }
+        function VerifyCard(){
+            var card=document.getElementById("txtCard").value;
+            if(user.Card === card){
+                document.getElementById("txtCVV").disabled=false
+            }
+
+        }
+        function VerifyCVV(){
+            var cvv=document.getElementById("txtCVV").value;
+            if(user.CVV === cvv){
+                document.getElementById("lstExpiry").disabled=false
+            } 
+        }
+        function VerifyExpiry(){
+            var expiry=document.getElementById("lstExpiry").value;
+            if(user.Expiry === expiry){
+                document.getElementById("btnPay").disabled=false
+            } 
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Payment</legend>
+        <dl>
+            <dt>Card Number</dt>
+            <dd><input type="text" id="txtCard" onblur="VerifyCard()"></dd>
+
+            <dt>CVV</dt>
+            <dd><input size="4" type="text" id="txtCVV" disabled onblur="VerifyCVV()"></dd>
+
+            <dt>Expiry</dt>
+            <dd>
+                <select id="lstExpiry" disabled onChange="VerifyExpiry()">
+                    <option>Select Expiry</option>
+                    <option >2025</option>
+                    <option >2022</option>
+                    </select>
+                </dd>
+
+        </dl>
+        <button id="btnPay" disabled>Pay</button>
+    </fieldset>
+</body>
+</html>
