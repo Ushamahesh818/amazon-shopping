@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var categories=["Select Category","Electronics","Footwears"];
+        var electronics=["Select Electronics","Mobile","TV"];
+        var footwears=["Select Footwear","Casual","Sports"];
+        var products=[];
+
+        function bodyLoad(){
+            var categoryList= document.getElementById("lstCategory");
+            categories.map(function(item){
+                var option=document.createElement("option");
+                option.text=item;
+                option.value=item;
+                categoryList.appendChild(option);
+            })           
+        }
+
+        function LoadProducts(){
+            document.getElementById("lstProducts").innerHTML=""
+            var productList= document.getElementById("lstProducts");
+            products.map(function(item){
+                var option=document.createElement("option");
+                option.text=item;
+                option.value=item;
+                productList.appendChild(option);
+            })
+        }
+
+        function CategoryChange(){          
+            var category= document.getElementById("lstCategory").value;
+
+            switch(category){
+                case "Electronics":
+                                    products=[...electronics];
+                                    LoadProducts();
+                                    break;
+                case "Footwears":
+                                    products=[...footwears];
+                                        LoadProducts();
+                                        break;
+
+                    default:
+                                    products=["Please select Category"];
+                                    LoadProducts();
+                                    break;
+            }
+
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    Category<select id="lstCategory" onchange="CategoryChange()"></select><br><br>
+    Product:<select id="lstProducts"></select>
+</body>
+</html>
